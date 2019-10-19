@@ -55,7 +55,6 @@ def get_average(l):
       avg=(l[num]+l[num+1]+l[num+2])/3
       num=num+3
       avg_sp.append(avg)
-   #print(avg_sp)
    return avg_sp
 
 #function to write to files
@@ -87,7 +86,6 @@ def insertion_sort(l,n):
                l1[i+1]=l1[i]
                i=i-1
          l1[i+1]=key
-   #print("insertion sort result",l1)
    return l1
 
 #implementation of quick sort
@@ -180,8 +178,6 @@ def perform(l,file_name,n):
       performance+="End time is "+str(end_time)+"\n"
       total_time=end_time-start_time
       insertion_plot.append(total_time)
-      #l=list_int_to_str(l)
-      #print("l after insertion str",l)
       performance+="The process time is "+str(total_time)+"\n\n"
       performance+="Performing quick sort for file "+file_name+"\n"
       output+="The output of quick sort for file "+file_name+" is\n\n"
@@ -202,7 +198,6 @@ def perform(l,file_name,n):
       total_time=end_time-start_time
       quick_plot.append(total_time)
       performance+="The process time is "+str(total_time)+"\n\n\n"
-      #l=list_int_to_str(l)
       s=[]
       l3=list(l)
       output+="The output of merge sort for file "+file_name+" is\n\n"
@@ -249,7 +244,6 @@ choice=input("Please enter the input for which the program must run . Enter q to
 
 if (choice == "2" or choice== "3"):
     for f in get_file_name(file_name,int(choice)):
-        #f="input_2_5000.txt"
         l=file_to_list(f)
         n=len(l)
         performance,output,qp,ip,mp=perform(l,f,n)
